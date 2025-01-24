@@ -9,23 +9,6 @@ This program is a simple banking system written in C. It allows users to perform
 - **Withdraw Money:** Subtract money from the account, provided sufficient funds are available.
 - **Exit Program:** Safely exit the program.
 
-### Operations
-- **Check Balance:**
-  - Displays the current balance in the account.
-
-- **Deposit Money:**
-  - Prompts the user to enter an amount to deposit.
-  - Validates the input to ensure the amount is greater than 0.
-  - Updates the balance if the input is valid.
-
-- **Withdraw Money:**
-  - Prompts the user to enter an amount to withdraw.
-  - Validates the input to ensure the amount is greater than 0 and does not exceed the current balance.
-  - Updates the balance if the input is valid.
-
-- **Exit Program:**
-  - Safely terminates the program with a farewell message.
-
 ### Error Handling
 - If an invalid amount (e.g., less than or equal to 0) is entered for deposit or withdrawal, the program displays an error message and retains the current balance.
 - If the withdrawal amount exceeds the current balance, the program displays an error message indicating insufficient funds.
