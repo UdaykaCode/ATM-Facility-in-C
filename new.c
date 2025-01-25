@@ -2,22 +2,16 @@
 #include<stdlib.h>
 // Function Decleration -->
 float dpt(float a,float b){
-	if (b == 0){ // If input is 0, then it will break the program
-    printf("Amount should be Rs: 1.00 or Above");
-	return 1;
-    }
+	if (b == 0) // If input is 0, then it will break the program
+	return a;
 	float sum = a + b;
 	return sum;
 }
 float wth(float a,float b){
-    if (a == 0){ // If the main amount is 0, then the program is end
-    printf("Insufficient Amount for Transation");
+    if (a == 0) // If the main amount is 0, then the program cannot run
     return 1;
-    }
-    else if (b == 0){ // If input is 0, then it will break the program
-    printf("Amount should be Rs: 1.00 or Above");
-    return 1;
-    }
+    else if (b == 0) // If input is 0, then it will break the program
+    return b;
 	float sub = a - b;
 	return sub;
 }
@@ -35,15 +29,19 @@ int main(void){
 			case 2 :	printf("***************************************\nEnter Your Amount : ");
 						scanf("%f",&x);
 						result = dpt(result,x);  // Calling function
-						if (result == 1) // Checking the return for error handeling
-						result=0; // Reinitilizating the variable value
+						if (result == 0) // Checking the return 
+						printf("Amount should be Rs: 1.00 or Above");
 						else
 						printf("\n--Deposite Successfull!\n***************************************\n"); break;
 			case 3 :	printf("***************************************\nEnter Your Amount : ");
 						scanf("%f",&x);
 						result = wth(result,x);
-						if (result == 1)
+						if (result == 1){
+						printf("Insufficient Amount for Transation");
 						result = 0;
+						}
+						else if(result == 0)
+						printf("Amount should be Rs: 1.00 or Above");
 						else
 						printf("\n--Withdraw Successfull!\n***************************************\n");break;
 			case 4 :	printf("**Thank You! Have a nice day.**");exit(1); // Direct Exit or close the program
