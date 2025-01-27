@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-// Function Decleration -->
+// Function Declaration -->
 float dpt(float a,float b){
 	if (b == 0) // If input is 0, then it will break the program
 	return a;
